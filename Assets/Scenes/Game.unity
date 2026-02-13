@@ -542,6 +542,7 @@ MonoBehaviour:
     enemyCount: 20
     spawnInterval: 0.5
     waveInterval: 12
+  waveController: {fileID: 1888470326}
 --- !u!4 &535644974
 Transform:
   m_ObjectHideFlags: 0
@@ -1090,9 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWave:
-    enemyPrefabs:
-    - {fileID: 7591800460858037780, guid: 26fb4a3794983844781ecb674ca3474a, type: 3}
-    - {fileID: 1928853565600797406, guid: b363fb019a12f764bb4223e7aeda6e6a, type: 3}
+    enemyPrefabs: []
     enemyCount: 10
     spawnInterval: 3
     waveInterval: 7

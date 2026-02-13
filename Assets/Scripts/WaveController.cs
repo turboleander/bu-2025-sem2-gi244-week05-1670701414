@@ -11,12 +11,25 @@ public class WaveController : MonoBehaviour
     void Update()
     {
         var t = Time.time;
-        if (t >= nextSpawnTime && enemySpawned <= currentWave.enemyCount)
+        if (t > nextSpawnTime && enemySpawned <= currentWave.enemyCount)
         {
             Spawn();
             enemySpawned++;
             nextSpawnTime = Time.time + currentWave.spawnInterval;
         }
+    }
+
+    public void ChangeWave(Wave wave)
+    {
+        currentWave = wave;
+
+        enemySpawned = 0;
+        nextSpawnTime = Time.time;
+    }
+
+    public bool IsCompleted()
+    {
+        return enemySpawned >= currentWave.enemyCount;
     }
 
     void Spawn()
